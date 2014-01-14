@@ -192,6 +192,11 @@ static int opt_data_codec(void *optctx, const char *opt, const char *arg)
     OptionsContext *o = optctx;
     return parse_option(o, "codec:d", arg, options);
 }
+static int opt_nice(OptionsContext *o, const char *opt, const char *arg)
+{
+    nice(atoi(arg));
+    return HAS_ARG;
+}
 
 static int opt_map(void *optctx, const char *opt, const char *arg)
 {
@@ -2384,6 +2389,7 @@ const OptionDef options[] = {
     /* data codec support */
     { "dcodec", HAS_ARG | OPT_DATA | OPT_PERFILE | OPT_EXPERT | OPT_INPUT | OPT_OUTPUT, { .func_arg = opt_data_codec },
         "force data codec ('copy' to copy stream)", "codec" },
+    { "nice", HAS_ARG, {.func_arg = opt_nice}, "nice process", "nice"},
 
     { NULL, },
 };
