@@ -1,0 +1,2 @@
+#!/bin/bash
+/configure --extra-version='4:0.8.9-0ubuntu0.12.04.1' --arch='i386' --prefix=/usr --libdir=/usr/lib/i386-linux-gnu --enable-vdpau --enable-bzlib --enable-libgsm --enable-libschroedinger --enable-libspeex --enable-libtheora --enable-libvorbis --enable-pthreads --enable-zlib --enable-libvpx --enable-runtime-cpudetect --enable-libfreetype      --enable-vaapi      --enable-libfaac --enable-nonfree --enable-gpl --enable-postproc --enable-swscale --enable-x11grab                   --enable-libdc1394
